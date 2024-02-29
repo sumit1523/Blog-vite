@@ -6,7 +6,7 @@ import { login, logout } from "./store/authSlice";
 import { Header, Footer } from "./components";
 // import { Outlet } from "react-router-dom";
 
-function App() {
+const App = () => {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
 
@@ -29,6 +29,6 @@ function App() {
       </div>
     </div>
   ) : null;
-}
+};
 
 export default App;
