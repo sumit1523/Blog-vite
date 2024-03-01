@@ -84,11 +84,7 @@ export class Service {
 
   async uploadFile(file) {
     try {
-      return await this.bucket.createFile(
-        config.appwriteBucketId,
-        ID.unique(),
-        file
-      );
+      await this.bucket.createFile(config.appwriteBucketId, ID.unique(), file);
     } catch (error) {
       console.log("Appwrite serive :: uploadFile :: error", error);
       return false;

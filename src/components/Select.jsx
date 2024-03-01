@@ -1,7 +1,7 @@
 import React, { userId } from "react";
 
 const Select = ({ options, label, className = "", ...props }, ref) => {
-  const id = userId();
+  const id = userId;
   return (
     <div className="w-full">
       {label && <label htmlFor={id} className=""></label>}

@@ -7,8 +7,8 @@ import authService from "../appwrite/auth";
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const [error, setError] = useState("");
 
@@ -16,6 +16,7 @@ const Login = () => {
     setError("");
     try {
       const session = await authService.login(data);
+      console.log(session, "ssssss");
       if (session) {
         const userData = await authService.getCurrentUser();
         if (userData) dispatch(authLogin(userData));
