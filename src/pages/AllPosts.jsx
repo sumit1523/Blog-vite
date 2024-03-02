@@ -4,6 +4,7 @@ import appwriteService from "../appwrite/dbConfig";
 
 const AllPosts = () => {
   const [posts, setPosts] = useState([]);
+
   useEffect(() => {
     appwriteService.getPosts([]).then((posts) => {
       if (posts) {
